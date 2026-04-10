@@ -17,21 +17,21 @@ const Contactme = () => {
     console.log(form);
   };
 
-    const handleSendEmail = async (e) => {
-        e.preventDefault();
-        const data = await fetch('/api/server', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            name: form.name,
-            email: form.email,
-            message: form.message,
-        }),
-        });
+  const handleSendEmail = async (e) => {
+    e.preventDefault();
+    const data = await fetch('/api/server', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      }),
+    });
 
-        const res = await data.json();
-        console.log(res);
-    };
+    const res = await data.json();
+    console.log(res);
+  };
 
   return (
     <div>
@@ -61,12 +61,15 @@ const Contactme = () => {
             onChange={handleOnchange}
           />
         </div>
-        <button style={{ width: '140px', height: '40px' }}>Contact Me</button>
+        <button 
+          style={{ width: '140px', height: '40px' }} 
+          onClick={handleSendEmail}
+        >
+          Contact Me
+        </button>
       </div>
-      <button>Go Back</button>
     </div>
   );
 };
 
 export default Contactme;
-
