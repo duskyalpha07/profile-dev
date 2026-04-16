@@ -67,6 +67,11 @@ const Contactme = () => {
         >
           Contact Me
         </button>
+
+
+        <p>
+                <Link to={'/'}>Go Back</Link>
+        </p>
       </div>
     </div>
   );

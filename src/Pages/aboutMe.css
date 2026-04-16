@@ -28,7 +28,7 @@
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #2de48b, #6e5ad1); /* Un toque tecnológico */
+    background: linear-gradient(90deg, #2de48b, #6e5ad1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
